@@ -324,11 +324,9 @@ section#project p {
   text-align: center;
 }
 .project-container {
-  width: 68%;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 }
 .project-container article {
@@ -533,13 +531,24 @@ section#contact {
     flex-direction: column;
     margin: 0 auto;
   }
-  .project-container article,
+  .project-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-container article{
+    width: 350px;
+  }
   .project-image {
-    width: 500px;
+    width: 350px;
+  }
+  .project-detail{
+    width: 350px;
   }
   .project-name,
   .subname {
-    margin-left: 110px;
+    margin-left: 50px;
   }
   .contact-container{
     flex-direction: column;
