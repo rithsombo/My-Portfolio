@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poiret+One&display=swap");
+@font-face {
+  font-family: "Brolink";
+  src: url("fonts/Brolink\ DEMO.otf") format("opentype");
+}
+@font-face {
+  font-family: "Erabura";
+  src: url("fonts/Erabura\ Regular.otf") format("opentype");
+}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -128,7 +136,6 @@ nav li a:hover::after {
 }
 section {
   width: 100%;
-  min-height: 80vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -148,7 +155,6 @@ section#home {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 .page-title .name {
   color: #fff;
@@ -158,8 +164,7 @@ section#home {
   animation-iteration-count: infinite;
   transition: all 2s ease;
   cursor: pointer;
-  font-family: "Poiret One", sans-serif;
-  text-shadow: 2px 2px 4px #ffffffab;
+  font-family: 'Brolink', sans-serif;
   font-weight: 500;
   letter-spacing: 0.1rem;
   font-size: 7rem;
@@ -334,7 +339,6 @@ section#project p {
 .project-container article {
   width: 500px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
@@ -392,6 +396,7 @@ section#project p {
 section#contact {
   position: relative;
   background-color: rgba(0, 0, 0, 0.923);
+  min-height: 50vh;
 }
 .contact-container {
   width: 70%;
@@ -500,6 +505,12 @@ section#contact {
   cursor: pointer;
 }
 @media (max-width: 1024px) {
+  section#home{
+    height: 70vh;
+  }
+  .page-title{
+    margin-top: -50px;
+  }
   section#home a {
     top: 1rem;
     left: 1rem;
@@ -525,16 +536,14 @@ section#contact {
     width: 100%;
   }
   .about-container {
-    flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
   }
   .about-details {
-    flex-direction: column;
     margin: 0 auto;
   }
   .project-container {
-    width: 70%;
+    width: 75%;
     gap: 10px;
   }
   .project-container article {
@@ -548,7 +557,7 @@ section#contact {
   }
   .project-name,
   .subname {
-    margin-left: 50px;
+    margin-left: 20px;
   }
   .contact-container {
     flex-direction: column;
@@ -584,5 +593,30 @@ section#contact {
   }
   .contact-ways {
     margin-left: 20px;
+  }
+}
+@media (max-width: 400px){
+  .about-container img{
+    width: 70%;
+    height: auto;
+  }
+  .about-container{
+    flex-direction: column;
+  }
+  .project-container {
+    width: 70%;
+    gap: 10px;
+  }
+  .project-container article img{
+    width: 274px;
+  }
+  .project-name,
+  .subname {
+    margin-left: 15px;
+  }
+}
+@media (max-width: 600px){
+  .about-container{
+    flex-direction: column;
   }
 }
