@@ -24,7 +24,7 @@ function showSlides() {
   slideIndex = (slideIndex + 1) % slides.length;
   slides[slideIndex].classList.add("active");
 }
-setInterval(showSlides, 3000);
+setInterval(showSlides, 4000);
 showSlides();
 // scroll to section
 document.querySelectorAll(".scroll-link").forEach((link) => {
