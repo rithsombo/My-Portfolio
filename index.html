@@ -7,11 +7,68 @@
     <link rel="stylesheet" href="index.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
+
   <body>
     <!-- name -->
     <div class="page-title">
-      <div class="name" data-aos="fade-up">lemonade</div>
-      <canvas id="3d-canvas"></canvas>
+      <svg
+        class="line-drawing-demo"
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 1280 1024"
+        style="enable-background: new 0 0 1280 1024"
+        xml:space="preserve"
+      >
+        <g>
+          <path
+            d="M285.37,527.11c-21.85,0-39.58-17.73-39.58-39.58V439.5c0-3.34,2.68-6.02,6.02-6.02s6.08,2.68,6.08,6.02v48.03
+            c0,15.18,12.3,27.55,27.48,27.55h47.57c3.34,0,6.02,2.68,6.02,6.02s-2.68,6.02-6.02,6.02H285.37z"
+          />
+          <path
+            d="M358.06,445.52c-3.34,0-6.02-2.68-6.02-6.02s2.68-6.02,6.02-6.02h82.18c3.34,0,6.02,2.68,6.02,6.02s-2.68,6.02-6.02,6.02
+            H358.06z M358.06,526.65c-3.34,0-6.02-2.75-6.02-6.08s2.68-6.02,6.02-6.02h82.18c3.34,0,6.02,2.68,6.02,6.02s-2.68,6.08-6.02,6.08
+            H358.06z M358.85,486.09c-3.34,0-6.02-2.68-6.02-6.02s2.68-6.08,6.02-6.08h80.61c3.27,0,6.02,2.75,6.02,6.08s-2.75,6.02-6.02,6.02
+            H358.85z"
+          />
+          <path
+            d="M540.81,521.42v-55.88l-29.25,58.56c-1.05,2.03-3.4,3.34-5.43,3.34c-2.36,0-4.32-1.31-5.69-3.34l-28.92-58.56v55.88
+            c0,3.34-2.75,6.02-6.08,6.02s-6.08-2.68-6.08-6.02v-81.79c0-3.08,1.7-5.43,4.71-6.08l1.44-0.13c2.16,0,4.19,1.24,5.3,3.53
+            l35.33,70.99l35-70.99c1.18-2.29,3.21-3.53,5.56-3.53l1.57,0.13c2.68,0.65,4.71,3.01,4.71,6.08v81.79c0,3.34-3.08,6.02-6.08,6.02
+            C543.49,527.44,540.81,524.76,540.81,521.42z"
+          />
+          <path
+            d="M606.37,528.03c-22.18,0-40.3-19.56-40.3-40.83v-14.33c0-22.25,18.06-40.3,40.3-40.3h14.33c22.25,0,40.3,18.06,40.3,40.3
+            v14.33c0,21.92-17.99,40.24-40.17,40.83H606.37z M648.96,487.2v-14.33c0-15.57-12.69-28.27-28.27-28.27h-14.33
+            c-15.57,0-28.27,12.69-28.27,28.27v14.33c0,15.44,12.69,28.33,28.33,28.72h14.2C636.27,515.53,648.96,502.64,648.96,487.2z"
+          />
+          <path
+            d="M756.92,525.48l-70.73-71.38v67.39c0,3.34-2.68,6.02-6.09,6.02c-3.34,0-6.02-2.68-6.02-6.02v-81.85
+            c0-3.66,2.75-6.15,6.02-6.15c1.64,0,3.27,0.65,4.38,1.83l70.73,71.38v-67.07c0-3.34,2.68-6.02,6.09-6.02
+            c3.34,0,6.02,2.68,6.02,6.02v81.85c0,3.66-3.99,6.02-6.02,6.02C759.61,527.5,757.9,526.85,756.92,525.48z"
+          />
+          <path
+            d="M782.18,525.48c-1.18-1.18-1.77-2.75-1.77-4.32c0-1.64,0.59-3.21,1.77-4.38l81.53-81.46c1.05-1.31,2.55-1.9,3.99-1.9
+            l2.36,0.52c2.36,0.65,3.66,3.01,3.66,5.37v81.85c0,3.34-2.68,6.02-6.02,6.02c-3.34,0-6.02-2.68-6.02-6.02v-67.07l-70.73,71.38
+            c-1.18,1.18-2.68,1.77-4.25,1.77S783.55,526.65,782.18,525.48z"
+          />
+          <path
+            d="M892.82,526.92c-3.34,0-6.02-2.75-6.02-6.08v-40.5c0-3.34,2.68-6.08,6.02-6.08c3.34,0,6.02,2.75,6.02,6.08v34.48h41.48
+            c15.18,0,27.54-12.37,27.54-27.55v-13.94c0-15.18-12.37-27.55-27.54-27.55h-47.5c-3.34,0-6.02-2.68-6.02-6.02s2.68-6.02,6.02-6.02
+            h47.5c21.85,0,39.65,17.73,39.65,39.58v13.94c0,21.85-17.8,39.65-39.65,39.65H892.82z"
+          />
+          <path
+            d="M999.08,445.52c-3.34,0-6.02-2.68-6.02-6.02s2.68-6.02,6.02-6.02h82.18c3.34,0,6.02,2.68,6.02,6.02s-2.68,6.02-6.02,6.02
+            H999.08z M999.08,526.65c-3.34,0-6.02-2.75-6.02-6.08s2.68-6.02,6.02-6.02h82.18c3.34,0,6.02,2.68,6.02,6.02s-2.68,6.08-6.02,6.08
+            H999.08z M999.86,486.09c-3.34,0-6.02-2.68-6.02-6.02s2.68-6.08,6.02-6.08h80.61c3.27,0,6.02,2.75,6.02,6.08s-2.75,6.02-6.02,6.02
+            H999.86z"
+          />
+        </g>
+      </svg>
+      <!--    <canvas id="3d-canvas"></canvas>-->
     </div>
     <!-- menu overlay -->
     <div class="overlay" id="overlay">
@@ -36,19 +93,46 @@
         <div
           class="slide"
           style="
-            background-image: url('./img/heroscreen.cc-wallpaper-desktop-3840x2160-14-20240919.webp');
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0.7)
+              ),
+              url('./img/wallpapersden.com_k-jinx-arcane-season-2_5120x2880.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Adjust as needed */
+            margin: 0;
           "
         ></div>
         <div
           class="slide"
           style="
-            background-image: url('./img/heroscreen-wallpaper-21-20240925.webp');
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0.7)
+              ),
+              url('./img/jinx-arcane-neon-3840x2160-19860.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Adjust as needed */
+            margin: 0;
           "
         ></div>
         <div
           class="slide"
           style="
-            background-image: url('./img/heroscreen-wallpaper-02-20240925.webp');
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0.7)
+              ),
+              url('./img/1376749-arcane-jinx-lol-league-of-legends-game-art-4k.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Adjust as needed */
+            margin: 0;
           "
         ></div>
       </div>
@@ -56,7 +140,11 @@
     <section id="about">
       <h1>About me</h1>
       <div class="about-container">
-        <img src="img/a_dog_professor_lecturing_a_class_on.jpeg" alt="" data-aos="zoom-out" />
+        <img
+          src="img/a_dog_professor_lecturing_a_class_on.jpeg"
+          alt=""
+          data-aos="zoom-out"
+        />
         <div class="about-details">
           <h3 data-aos="fade-down">Know about me</h3>
           <div class="about-name" data-aos="fade-right">
@@ -289,6 +377,7 @@
   <script type="module" src="index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script>
     AOS.init({
       offset: 120, // offset (in px) from the original trigger point
@@ -297,6 +386,19 @@
       easing: "ease", // default easing for AOS animations
       once: false, // whether animation should happen only once - while scrolling down
       mirror: false, // whether elements should animate out while scrolling past them
+    });
+  </script>
+  <script>
+    anime({
+      targets: ".line-drawing-demo path",
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: "easeInOutSine",
+      duration: 1800,
+      delay: function (el, i) {
+        return i * 300;
+      },
+      direction: "alternate",
+      loop: true,
     });
   </script>
 </html>
