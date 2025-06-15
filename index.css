@@ -1,21 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poiret+One&display=swap");
+
 @font-face {
   font-family: "Brolink";
   src: url("fonts/Brolink\ DEMO.otf") format("opentype");
 }
+
 @font-face {
   font-family: "Erabura";
   src: url("fonts/Erabura\ Regular.otf") format("opentype");
 }
+
 * {
   margin: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
   margin: 0;
 }
+
 .overlay {
   position: fixed;
   z-index: 9;
@@ -23,8 +28,20 @@ body {
   left: 0;
   width: 20vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.82);
   transform: translateX(-100vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay2 {
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.82);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,19 +50,33 @@ body {
   transition: all 0.4s ease-in-out;
   transform: translateX(0);
 }
+
 .overlay-slide-right {
   transition: all 0.6s ease-in-out;
   transform: translateX(-100vw);
 }
 
+svg {
+  max-width: 1000px;
+}
+
+path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 nav ul li {
   list-style: none;
 }
+
 nav ul {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
+
 nav li a {
   font-family: "Host Grotesk", sans-serif;
   font-size: 2rem;
@@ -134,6 +165,7 @@ nav li a:hover::after {
     opacity: 1;
   }
 }
+
 section {
   width: 100%;
   position: relative;
@@ -143,9 +175,12 @@ section {
   letter-spacing: 2px;
   overflow-x: hidden;
 }
+
 section#home {
   position: relative;
+  background-color: black;
 }
+
 .page-title {
   position: absolute;
   z-index: 7;
@@ -156,6 +191,7 @@ section#home {
   justify-content: center;
   flex-direction: column;
 }
+
 .page-title .name {
   color: #fff;
   animation: textt;
@@ -164,7 +200,7 @@ section#home {
   animation-iteration-count: infinite;
   transition: all 2s ease;
   cursor: pointer;
-  font-family: 'Brolink', sans-serif;
+  font-family: "Brolink", sans-serif;
   font-weight: 500;
   letter-spacing: 0.1rem;
   font-size: 7rem;
@@ -186,6 +222,7 @@ section#about {
   position: relative;
   background-color: rgba(0, 0, 0, 0.923);
 }
+
 section#about h1 {
   color: #fff;
   margin-top: 60px;
@@ -196,29 +233,35 @@ section#about h1 {
   font-weight: bold;
   font-size: 2em;
 }
+
 .about-container h3 {
   margin-top: 40px;
   color: white;
   font-family: "Poiret One", sans-serif;
 }
+
 .about-container {
   width: 90vw;
   display: flex;
   justify-content: space-evenly;
   margin-top: 50px;
 }
+
 .about-container img {
   width: 380px;
   height: 380px;
   border-radius: 500px;
 }
+
 .about-details {
   width: 400px;
 }
+
 .about-name {
   color: white;
   font-size: 3rem;
 }
+
 .myname {
   background-image: linear-gradient(to right, #fe02fa, #9500ff, #00fff2);
   -webkit-background-clip: text;
@@ -227,6 +270,7 @@ section#about h1 {
   font-family: "Poiret One", sans-serif;
   font-weight: 800;
 }
+
 .text-about-me {
   width: 350px;
   color: white;
@@ -234,11 +278,13 @@ section#about h1 {
   letter-spacing: 1px;
   font-size: 12px;
 }
+
 .skill {
   margin-top: 10px;
   color: grey;
   font-family: "Funnel Sans", serif;
 }
+
 .skill-container {
   margin-top: 6px;
   display: flex;
@@ -246,6 +292,7 @@ section#about h1 {
   flex-wrap: wrap;
   gap: 5px;
 }
+
 .subject {
   border-radius: 4px;
   padding: 4px 10px;
@@ -253,6 +300,7 @@ section#about h1 {
   background-color: #ffffff2d;
   font-family: "Funnel Sans", serif;
 }
+
 .subject:hover {
   cursor: pointer;
   background-color: #ffffff4c;
@@ -262,6 +310,7 @@ section#education {
   position: relative;
   background-color: rgba(0, 0, 0, 0.923);
 }
+
 #education h1 {
   width: 70%;
   background-image: linear-gradient(to right, #fe02fa, #9500ff, #00fff2);
@@ -272,6 +321,7 @@ section#education {
   font-size: 2em;
   margin-top: 30px;
 }
+
 .education-container {
   margin-top: 30px;
   width: 70%;
@@ -279,24 +329,29 @@ section#education {
   flex-direction: column;
   color: #fff;
 }
+
 .school-name {
   font-family: "Funnel Sans", serif;
   font-size: 18px;
 }
+
 .major-study {
   display: flex;
   justify-content: space-between;
   font-family: "Funnel Sans", serif;
   color: #ffffff84;
 }
+
 .major {
   letter-spacing: 1px;
   font-size: 14px;
 }
+
 .education-container:hover .year {
   cursor: pointer;
   color: #fe02fa;
 }
+
 .line {
   margin-top: 15px;
   width: 70%;
@@ -304,13 +359,16 @@ section#education {
   background-color: #ffffff95;
   margin-bottom: 20px;
 }
+
 .work-exp {
   margin-top: 70px;
 }
+
 section#project {
   position: relative;
   background-color: rgba(0, 0, 0, 0.923);
 }
+
 section#project h1 {
   color: #fff;
   margin-top: 60px;
@@ -321,6 +379,7 @@ section#project h1 {
   font-weight: bold;
   font-size: 2em;
 }
+
 section#project p {
   width: 50%;
   margin-top: 20px;
@@ -329,6 +388,7 @@ section#project p {
   font-size: 14px;
   text-align: center;
 }
+
 .project-container {
   width: 70%;
   margin-top: 50px;
@@ -336,6 +396,7 @@ section#project p {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 .project-container article {
   width: 500px;
   display: flex;
@@ -344,6 +405,7 @@ section#project p {
   overflow: hidden;
   margin-top: 30px;
 }
+
 .project-container a {
   text-decoration: none;
   color: inherit;
@@ -352,28 +414,35 @@ section#project p {
 .project-container a article {
   cursor: pointer;
 }
+
 .project-container article:hover .project-detail {
   background-color: #ffffff36;
 }
+
 .project-container article:hover .project-name {
   color: #9500ff;
 }
+
 .project-container article:hover .subname {
   color: #9500ff;
 }
+
 .project-image {
   width: 500px;
   overflow: hidden;
 }
+
 .project-image img {
   width: 100%;
   display: block;
   transition: all 0.2s ease-in-out;
 }
+
 .project-image img:hover {
   transform: scale(1.1);
   border-radius: 10px;
 }
+
 .project-detail {
   width: 500px;
   height: 80px;
@@ -382,22 +451,26 @@ section#project p {
   flex-direction: column;
   justify-content: center;
 }
+
 .project-name {
   margin-left: 20px;
   font-size: 1.5em;
   font-family: "Montserrat", sans-serif;
   color: #fff;
 }
+
 .subname {
   margin-left: 20px;
   font-family: "Montserrat", sans-serif;
   color: #fff;
 }
+
 section#contact {
   position: relative;
   background-color: rgba(0, 0, 0, 0.923);
   min-height: 50vh;
 }
+
 .contact-container {
   width: 70%;
   display: flex;
@@ -405,19 +478,23 @@ section#contact {
   align-items: center;
   margin-top: 100px;
 }
+
 .contact-detail {
   width: 500px;
 }
+
 .contact-container h4 {
   font-family: "Poiret One", sans-serif;
   color: #ffffffaa;
 }
+
 .contact-container h1 {
   font-family: "Poiret One", sans-serif;
   color: #ffffff;
   font-size: 3rem;
   margin-top: 10px;
 }
+
 .contact-container p {
   font-family: "Nunito", sans-serif;
   color: #ffffff;
@@ -425,29 +502,36 @@ section#contact {
   margin-top: 20px;
   letter-spacing: 0;
 }
+
 .app {
   margin-top: 5px;
   display: flex;
   gap: 10px;
 }
+
 .linkin img {
   width: 30px;
 }
+
 .facebook img {
   width: 30px;
 }
+
 .telegram img {
   width: 30px;
 }
+
 .github img {
   width: 30px;
 }
+
 .contact-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
   width: 500px;
 }
+
 .contact-form input,
 .contact-form textarea {
   background-color: #333333ab;
@@ -459,10 +543,12 @@ section#contact {
   width: 100%;
   font-family: "Nunito", sans-serif;
 }
+
 .contact-form textarea {
   grid-column: span 2;
   height: 150px;
 }
+
 .contact-form button {
   grid-column: span 2;
   background-color: #f5f5f5;
@@ -474,25 +560,30 @@ section#contact {
   cursor: pointer;
   font-family: "Nunito", sans-serif;
 }
+
 .contact-form button:hover {
   background-color: #e0e0e0;
 }
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #c7c7c7;
 }
+
 .endline {
   width: 70%;
   height: 1px;
   background-color: white;
   margin-bottom: 30px;
 }
+
 .aline {
   width: 80%;
   height: 2px;
   background-color: white;
   margin-top: 60px;
 }
+
 .another-namae {
   letter-spacing: 1px;
   margin-top: 20px;
@@ -500,17 +591,21 @@ section#contact {
   font-family: "Poiret One", sans-serif;
   font-size: 1.3rem;
 }
+
 .another-namae:hover {
   color: #9500ff;
   cursor: pointer;
 }
+
 @media (max-width: 1024px) {
-  section#home{
+  section#home {
     height: 70vh;
   }
-  .page-title{
+
+  .page-title {
     margin-top: -50px;
   }
+
   section#home a {
     top: 1rem;
     left: 1rem;
@@ -520,6 +615,7 @@ section#contact {
     top: 0.5rem;
     right: 1rem;
   }
+
   .overlay {
     width: 100%;
     background-color: black;
@@ -529,94 +625,119 @@ section#contact {
     align-items: center;
     justify-content: center;
   }
+
   .page-title .name {
     font-size: 3rem;
   }
+
   .container {
     width: 100%;
   }
+
   .about-container {
     align-items: center;
     margin-bottom: 30px;
   }
+
   .about-details {
     margin: 0 auto;
   }
+
   .project-container {
     width: 75%;
     gap: 10px;
   }
+
   .project-container article {
     width: 350px;
   }
+
   .project-image {
     width: 350px;
   }
+
   .project-detail {
     width: 350px;
   }
+
   .project-name,
   .subname {
     margin-left: 20px;
   }
+
   .contact-container {
     flex-direction: column;
   }
+
   .contact-detail {
     display: flex;
     flex-direction: column;
     margin-left: 100px;
   }
+
   .contact-detail p {
     width: 80%;
   }
+
   .contact-form {
     width: 400px;
     margin-top: 30px;
   }
+
   .another-namae {
     margin-bottom: 40px;
   }
+
   .contact-form {
     width: 370px;
   }
+
   .contact-container h4 {
     margin-left: 23px;
   }
+
   .contact-container h1 {
     margin-left: 20px;
   }
+
   .contact-container p {
     width: 370px;
     margin-left: 20px;
     font-size: 12px;
   }
+
   .contact-ways {
     margin-left: 20px;
   }
 }
-@media (max-width: 400px){
-  .about-container img{
+
+@media (max-width: 400px) {
+  .about-container img {
     width: 70%;
     height: auto;
   }
-  .about-container{
+
+  .about-container {
     flex-direction: column;
   }
+
   .project-container {
     width: 70%;
     gap: 10px;
   }
-  .project-container article img{
+
+  .project-container article img {
     width: 274px;
   }
+
   .project-name,
   .subname {
     margin-left: 15px;
   }
 }
-@media (max-width: 600px){
-  .about-container{
+
+@media (max-width: 600px) {
+  .about-container {
     flex-direction: column;
   }
 }
