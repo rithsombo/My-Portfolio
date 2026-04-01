@@ -1,0 +1,87 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  fill="none"
+>
+  <defs>
+    <linearGradient id="glow" x1="256" y1="88" x2="256" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB347" />
+      <stop offset="1" stop-color="#F97316" />
+    </linearGradient>
+    <linearGradient id="pumpkin" x1="186" y1="70" x2="326" y2="218" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2F2A25" />
+      <stop offset="1" stop-color="#16130F" />
+    </linearGradient>
+    <linearGradient id="cloth" x1="160" y1="226" x2="350" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#201B15" />
+      <stop offset="1" stop-color="#0F0D0A" />
+    </linearGradient>
+    <filter id="shadow" x="84" y="44" width="344" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#000000" flood-opacity="0.32" />
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path
+      d="M248 72C236 52 250 34 272 44C290 52 294 72 286 88L248 72Z"
+      fill="url(#glow)"
+    />
+    <path
+      d="M258 88C210 88 174 120 174 168C174 212 208 244 256 244C304 244 338 212 338 168C338 120 304 88 258 88Z"
+      fill="url(#pumpkin)"
+    />
+    <path
+      d="M210 100C194 118 186 142 186 168C186 198 198 222 220 238"
+      stroke="#3A342E"
+      stroke-width="12"
+      stroke-linecap="round"
+    />
+    <path
+      d="M256 92C244 114 240 138 240 168C240 198 246 222 258 240"
+      stroke="#332D28"
+      stroke-width="12"
+      stroke-linecap="round"
+    />
+    <path
+      d="M304 100C320 118 328 142 328 168C328 198 316 222 294 238"
+      stroke="#3A342E"
+      stroke-width="12"
+      stroke-linecap="round"
+    />
+    <path
+      d="M216 148C202 142 192 152 196 166C200 180 222 186 232 176C240 168 232 154 216 148Z"
+      fill="url(#glow)"
+    />
+    <path
+      d="M298 144C314 138 324 150 320 166C316 182 298 188 288 176C280 166 284 152 298 144Z"
+      fill="url(#glow)"
+    />
+    <path
+      d="M194 194C214 212 246 218 284 214C306 212 324 204 336 194L346 202C328 228 298 242 256 244C216 246 184 232 170 206L194 194Z"
+      fill="url(#glow)"
+    />
+    <path
+      d="M176 224L336 224L360 250L352 328L330 356L320 420L286 398L254 430L226 404L190 424L180 364L152 330L144 248L176 224Z"
+      fill="url(#cloth)"
+    />
+    <path
+      d="M224 234H290"
+      stroke="#2A241D"
+      stroke-width="10"
+      stroke-linecap="round"
+    />
+    <ellipse cx="220" cy="314" rx="18" ry="28" fill="#120F0C" />
+    <ellipse cx="296" cy="326" rx="22" ry="34" fill="#17130F" />
+    <path
+      d="M252 244C252 244 250 266 256 282C262 266 260 244 260 244H252Z"
+      fill="url(#glow)"
+      opacity="0.9"
+    />
+    <path d="M250 430H266V486H250Z" fill="#211C17" />
+    <ellipse cx="258" cy="490" rx="56" ry="18" fill="#16130F" />
+    <path
+      d="M222 490C238 468 280 468 294 490C278 502 238 502 222 490Z"
+      fill="url(#glow)"
+    />
+  </g>
+</svg>
