@@ -13,10 +13,10 @@ export default function Page() {
     <main className="relative min-h-screen w-full overflow-hidden bg-background text-foreground">
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-0 bg-background bg-[radial-gradient(circle,rgba(15,23,42,0.04)_1px,transparent_1px)] [background-size:20px_20px] dark:bg-[radial-gradient(circle,rgba(255,255,255,0.04)_1px,transparent_1px)]"
+        className="absolute inset-0 z-0 bg-background bg-[radial-gradient(circle,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-size-[20px_20px] dark:bg-[radial-gradient(circle,rgba(255,255,255,0.04)_1px,transparent_1px)]"
       />
 
-      <div className="relative z-10 mx-auto min-h-screen w-full max-w-[1200px]">
+      <div className="relative z-10 mx-auto min-h-screen w-full max-w-300">
         <div className="flex min-h-screen flex-col px-6 py-8 sm:px-10 sm:py-10">
           <SiteHeader />
           <HeroSection />

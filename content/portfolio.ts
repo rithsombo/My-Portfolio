@@ -145,18 +145,13 @@ export const socialLinks: SocialLink[] = [
   },
   {
     label: "Telegram",
-    href: "https://t.me/l3m0nad3",
+    href: "https://t.me/rsombo",
     icon: "telegram",
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/rith-sombo-1811a0265",
     icon: "linkedin",
-  },
-  {
-    label: "X",
-    href: "https://x.com/",
-    icon: "x",
   },
 ]
 
@@ -525,14 +520,7 @@ export const experiences: Experience[] = [
         name: "Cigardash",
         description:
           "Built a complete ecommerce website for selling cigars, covering the full flow from product selection to checkout.",
-        stack: [
-          "Next.js",
-          "TypeScript",
-          "shadcn/ui",
-          "SWR",
-          "Zod",
-          "Zustand",
-        ],
+        stack: ["Next.js", "TypeScript", "shadcn/ui", "SWR", "Zod", "Zustand"],
       },
       {
         name: "Live.",
