@@ -1,15 +1,18 @@
 "use client"
 
 import { animate } from "animejs"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 
 import { SignatureMark } from "@/components/signature-mark"
 
-export function IntroOverlay() {
+type IntroOverlayProps = {
+  onComplete: () => void
+}
+
+export function IntroOverlay({ onComplete }: IntroOverlayProps) {
   const overlayRef = useRef<HTMLDivElement>(null)
   const markWrapRef = useRef<HTMLDivElement>(null)
   const svgRef = useRef<SVGSVGElement>(null)
-  const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
     const overlay = overlayRef.current
@@ -22,6 +25,17 @@ export function IntroOverlay() {
 
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = "hidden"
+    let hasCompleted = false
+
+    const completeIntro = () => {
+      if (hasCompleted) {
+        return
+      }
+
+      hasCompleted = true
+      document.body.style.overflow = previousOverflow
+      onComplete()
+    }
 
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
@@ -32,10 +46,7 @@ export function IntroOverlay() {
         opacity: [1, 0],
         duration: 250,
         ease: "outQuad",
-        onComplete: () => {
-          document.body.style.overflow = previousOverflow
-          setIsVisible(false)
-        },
+        onComplete: completeIntro,
       })
 
       return () => {
@@ -82,10 +93,7 @@ export function IntroOverlay() {
           duration: 420,
           delay: 40,
           ease: "outQuad",
-          onComplete: () => {
-            document.body.style.overflow = previousOverflow
-            setIsVisible(false)
-          },
+          onComplete: completeIntro,
         })
       },
     })
@@ -95,11 +103,7 @@ export function IntroOverlay() {
       markAnimation.revert()
       drawAnimation.revert()
     }
-  }, [])
-
-  if (!isVisible) {
-    return null
-  }
+  }, [onComplete])
 
   return (
     <div
