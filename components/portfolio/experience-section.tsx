@@ -15,14 +15,39 @@ export function ExperienceSection() {
         {experiences.map((experience) => (
           <div key={experience.company} className="divide-y divide-foreground/10">
             <div className="grid gap-4 py-6 sm:grid-cols-[1.1fr_1.3fr_1fr] sm:items-start sm:gap-6">
-              <div>
-                <p className="text-[10px] tracking-[0.3em] text-foreground/45 uppercase">
-                  Company
-                </p>
-                <h3 className="mt-2 text-lg font-medium text-foreground">
-                  {experience.company}
-                </h3>
-                <p className="mt-1 text-sm text-foreground/55">{experience.role}</p>
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-24 shrink-0 items-center justify-center overflow-hidden bg-foreground/[0.03] px-3">
+                  {experience.logo ? (
+                    <>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={experience.logo}
+                        alt={`${experience.company} logo`}
+                        className="h-full w-full object-contain"
+                      />
+                    </>
+                  ) : (
+                    <span className="text-sm font-medium tracking-[0.2em] text-foreground/45 uppercase">
+                      {experience.company
+                        .split(" ")
+                        .map((word) => word[0])
+                        .join("")
+                        .slice(0, 2)}
+                    </span>
+                  )}
+                </div>
+
+                <div>
+                  <p className="text-[10px] tracking-[0.3em] text-foreground/45 uppercase">
+                    Company
+                  </p>
+                  <h3 className="mt-2 text-lg font-medium text-foreground">
+                    {experience.company}
+                  </h3>
+                  <p className="mt-1 text-sm text-foreground/55">
+                    {experience.role}
+                  </p>
+                </div>
               </div>
               {experience.summary ? (
                 <p className="text-sm leading-7 text-foreground/74 sm:col-span-2">

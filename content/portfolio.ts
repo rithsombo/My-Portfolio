@@ -34,6 +34,7 @@ export type ExperienceDetail = {
 
 export type Experience = {
   company: string
+  logo?: string
   role: string
   summary: string
   details: ExperienceDetail[]
@@ -41,6 +42,8 @@ export type Experience = {
 
 export type EducationItem = {
   school: string
+  logo?: string
+  logoClassName?: string
   program: string
   year: string
 }
@@ -267,6 +270,10 @@ export const stackItems: StackItem[] = [
     logo: "https://svgl.app/library/nextjs_icon_dark.svg",
   },
   {
+    name: "Remix",
+    logo: "https://svgl.app/library/remix_dark.svg",
+  },
+  {
     name: "React",
     logo: "https://svgl.app/library/react_dark.svg",
   },
@@ -383,6 +390,10 @@ export const stackItems: StackItem[] = [
     logo: "https://svgl.app/library/git.svg",
   },
   {
+    name: "Google Analytics",
+    logo: "https://svgl.app/library/google-analytics.svg",
+  },
+  {
     name: "MongoDB",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/1280px-MongoDB_Logo.svg",
   },
@@ -399,7 +410,7 @@ export const stackItems: StackItem[] = [
 export const stackGroups: StackGroup[] = [
   {
     label: "Frontend",
-    items: ["Next.js", "React", "Vue", "TypeScript", "Tailwind CSS"],
+    items: ["Next.js", "Remix", "React", "Vue", "TypeScript", "Tailwind CSS"],
   },
   {
     label: "Backend",
@@ -436,13 +447,21 @@ export const stackGroups: StackGroup[] = [
   },
   {
     label: "UI & Tools",
-    items: ["shadcn/ui", "Motion", "Sentry", "Git", "Codex"],
+    items: [
+      "shadcn/ui",
+      "Motion",
+      "Sentry",
+      "Google Analytics",
+      "Git",
+      "Codex",
+    ],
   },
 ]
 
 export const experiences: Experience[] = [
   {
     company: "Sea Ventures",
+    logo: "https://avatars.githubusercontent.com/u/236361117?s=200&v=4",
     role: "Frontend Developer",
     summary: "",
     details: [
@@ -474,6 +493,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Wonderpass",
+    logo: "https://wonderpass.asia/images/wonderpass.svg",
     role: "Frontend Developer",
     summary: "",
     details: [
@@ -532,6 +552,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "International University",
+    logo: "",
     role: "Full-stack Developer",
     summary: "",
     details: [
@@ -548,21 +569,26 @@ export const experiences: Experience[] = [
 export const educationItems: EducationItem[] = [
   {
     school: "Hun Sen SereyPheab High School",
+    logo: "",
     program: "Grade 10-12",
     year: "2018-2021",
   },
   {
     school: "Australian Centre for Education (ACE)",
+    logo: "",
     program: "General English Program",
     year: "2021-2023",
   },
   {
     school: "Australian Centre for Education (ACE)",
+    logo: "",
     program: "IELTS",
     year: "2023",
   },
   {
     school: "SETEC Institute",
+    logo: "https://www.setecu.com/images/sampledata/icetheme/logo.png",
+    logoClassName: "scale-125",
     program: "Management Information Systems",
     year: "2022-Present",
   },
@@ -590,5 +616,6 @@ export const themeAdaptiveLogos = new Set([
   "SWR",
   "Drizzle",
   "Prisma",
+  "Remix",
   "Vercel",
 ])
