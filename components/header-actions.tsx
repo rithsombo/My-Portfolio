@@ -2,7 +2,7 @@
 
 import { Moon, Search, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -64,6 +64,36 @@ export function HeaderActions({ sections }: HeaderActionsProps) {
     })
   }
 
+  function openSearch() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+    setOpen(true)
+  }
+
+  useEffect(() => {
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.defaultPrevented || event.repeat) {
+        return
+      }
+
+      if (!(event.metaKey || event.ctrlKey) || event.altKey) {
+        return
+      }
+
+      if (event.key.toLowerCase() !== "k") {
+        return
+      }
+
+      event.preventDefault()
+      openSearch()
+    }
+
+    window.addEventListener("keydown", onKeyDown)
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown)
+    }
+  }, [])
+
   return (
     <div className="flex w-full items-center justify-end gap-1.5 text-xs normal-case tracking-normal sm:w-auto sm:gap-2">
       <Button
@@ -83,10 +113,14 @@ export function HeaderActions({ sections }: HeaderActionsProps) {
           <Button
             type="button"
             variant="outline"
+            onClick={openSearch}
             className="h-8 min-w-0 flex-1 justify-start rounded-full border-foreground/10 bg-foreground/[0.03] px-3 text-foreground/55 hover:bg-foreground/[0.06] hover:text-foreground sm:h-9 sm:w-[240px] sm:flex-none sm:px-4"
           >
             <Search className="h-4 w-4" />
             <span className="truncate text-[11px] sm:text-sm">Search sections</span>
+            <span className="ml-auto hidden text-[10px] tracking-[0.2em] text-foreground/35 uppercase sm:inline">
+              ⌘K
+            </span>
           </Button>
         </PopoverTrigger>
         <PopoverContent
