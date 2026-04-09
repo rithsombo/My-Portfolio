@@ -394,8 +394,20 @@ export const stackItems: StackItem[] = [
     logo: "https://svgl.app/library/google-analytics.svg",
   },
   {
+    name: "Meta Pixel",
+    logo: "https://lh3.googleusercontent.com/8wZz-WY-qmpxhaZGAEYQTmzQdqeGVagOLGSGanX-JT3etH2snxbDmUMi-YCnUwXULs31wLGeLQjCvyRryNQA76i-72w=s120",
+  },
+  {
     name: "MongoDB",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/1280px-MongoDB_Logo.svg",
+  },
+  {
+    name: "MySQL",
+    logo: "https://svgl.app/library/mysql-icon-dark.svg",
+  },
+  {
+    name: "PostgreSQL",
+    logo: "https://svgl.app/library/postgresql.svg",
   },
   {
     name: "Prisma",
@@ -437,6 +449,8 @@ export const stackGroups: StackGroup[] = [
     label: "Database & Platform",
     items: [
       "MongoDB",
+      "MySQL",
+      "PostgreSQL",
       "SQL Server",
       "Supabase",
       "Convex",
@@ -452,6 +466,7 @@ export const stackGroups: StackGroup[] = [
       "Motion",
       "Sentry",
       "Google Analytics",
+      "Meta Pixel",
       "Git",
       "Codex",
     ],

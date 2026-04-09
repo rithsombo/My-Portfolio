@@ -44,6 +44,34 @@ export function StackLogo({ name, size = "sm" }: StackLogoProps) {
     )
   }
 
+  if (name === "MySQL") {
+    const iconClass =
+      size === "md" ? "h-10 w-10 object-contain" : "h-5 w-5 object-contain"
+
+    return (
+      <>
+        <Image
+          src="https://svgl.app/library/mysql-icon-light.svg"
+          alt="MySQL logo"
+          className={cn(iconClass, "dark:hidden")}
+          width={size === "md" ? 40 : 20}
+          height={size === "md" ? 40 : 20}
+          loading="lazy"
+          unoptimized
+        />
+        <Image
+          src="https://svgl.app/library/mysql-icon-dark.svg"
+          alt="MySQL logo"
+          className={cn(iconClass, "hidden dark:block")}
+          width={size === "md" ? 40 : 20}
+          height={size === "md" ? 40 : 20}
+          loading="lazy"
+          unoptimized
+        />
+      </>
+    )
+  }
+
   const src = stackLogoMap[name]
 
   if (!src) {

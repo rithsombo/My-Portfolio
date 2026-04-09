@@ -136,6 +136,7 @@
   html {
     @apply font-mono;
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
   }
 }
 

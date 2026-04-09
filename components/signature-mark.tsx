@@ -41,5 +41,5 @@ export const SignatureMark = forwardRef<SVGSVGElement, SignatureMarkProps>(
         </g>
       </svg>
     )
-  },
+  }
 )

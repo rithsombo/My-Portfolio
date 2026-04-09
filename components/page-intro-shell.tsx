@@ -48,10 +48,10 @@ export function PageIntroShell({
 
       <div
         className={cn(
-          "transition-[opacity,transform,filter] duration-700 ease-out",
+          "transition-[opacity,filter] duration-700 ease-out",
           isReady
-            ? "translate-y-0 opacity-100 blur-0"
-            : "pointer-events-none translate-y-5 opacity-0 blur-[8px]",
+            ? "opacity-100 blur-0"
+            : "pointer-events-none opacity-0 blur-[8px]",
         )}
       >
         {children}
