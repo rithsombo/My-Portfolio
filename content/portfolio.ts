@@ -481,6 +481,20 @@ export const experiences: Experience[] = [
     summary: "",
     details: [
       {
+        name: "J.Keydge Storefront",
+        description:
+          "Built and maintained a headless Shopify storefront for J.Keydge focused on selling jackets and apparel, including branded marketing pages, customer account flows, newsletter/contact integrations, analytics tracking, and a wholesale-only ordering experience with custom pricing.",
+        stack: [
+          "Shopify",
+          "Remix",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Google Analytics",
+          "Meta Pixel",
+        ],
+      },
+      {
         name: "Camboticket App",
         description:
           "Focused on mobile booking flows, notifications, profile updates, booking history, checkout, and activity search.",
