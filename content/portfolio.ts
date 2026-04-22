@@ -481,7 +481,7 @@ export const experiences: Experience[] = [
     summary: "",
     details: [
       {
-        name: "J.Keydge Storefront",
+        name: "J.Keydge",
         description:
           "Built and maintained a headless Shopify storefront for J.Keydge focused on selling jackets and apparel, including branded marketing pages, customer account flows, newsletter/contact integrations, analytics tracking, and a wholesale-only ordering experience with custom pricing.",
         stack: [
